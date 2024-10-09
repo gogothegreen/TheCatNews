@@ -1,31 +1,40 @@
-/* 3D Balloon-like section headings in pastel colors */
+/* Title styling */
+.title-overlay h1 {
+    font-size: 10rem !important;   /* Huge size for the title */
+    color: silver !important;      /* Metallic look */
+    text-align: center;
+    text-shadow: 3px 3px 5px rgba(0,0,0,0.5); /* Shadow for 3D effect */
+    font-family: 'Impact', sans-serif;        /* Strong, bold font */
+}
+
+/* 3D Balloon-like section headings */
 h2 {
-    font-size: 4rem;
-    color: white;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* 3D balloon-like shadow */
-    font-family: 'Comic Sans MS', cursive; /* Playful font for balloon effect */
-    margin-bottom: 50px;
+    font-size: 4rem;                  /* Large font size for headings */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Shadow for balloon-like effect */
+    font-family: 'Comic Sans MS', cursive;       /* Playful, balloon-like font */
+    margin-bottom: 50px;              /* Space below the headings */
 }
 
-h2:nth-of-type(1) {
-    color: #F9A8D4; /* Pastel pink */
-}
+/* Dynamic pastel colors for section headings */
+.color-0 { color: #F9A8D4; }  /* Pastel pink */
+.color-1 { color: #A7F3D0; }  /* Pastel green */
+.color-2 { color: #C4B5FD; }  /* Pastel purple */
+.color-3 { color: #FDE68A; }  /* Pastel yellow */
+.color-4 { color: #93C5FD; }  /* Pastel blue */
+.color-5 { color: #FDBA74; }  /* Pastel orange */
+.color-6 { color: #F4BBFF; }  /* Light Lavender */
+.color-7 { color: #C1C8E4; }  /* Light Peach */
 
-h2:nth-of-type(2) {
-    color: #A7F3D0; /* Pastel green */
-}
-
-h2:nth-of-type(3) {
-    color: #C4B5FD; /* Pastel purple */
-}
+/* Add more colors if needed for additional sections */
 
 /* Additional spacing between sections */
-section {
-    margin-bottom: 100px;
+.section {
+    margin-bottom: 100px;   /* More space between sections */
 }
 
+/* Flash animation keyframes for other elements */
 @keyframes flash {
-    0% { color: #f0f; } /* Purple */
+    0% { color: #f0f; }     /* Purple */
     50% { color: #f08080; } /* Pink */
-    100% { color: #f0f; } /* Purple */
+    100% { color: #f0f; }   /* Purple */
 }

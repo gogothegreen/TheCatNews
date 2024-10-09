@@ -110,3 +110,20 @@ Also, please get rid of the "Welcome to TheCatNews" text.
 Feel free to ask me any questions which might help you improve your answer. Thanks!
 #############################################################################
 #############################################################################
+Please fetch me the latest news on cats from around the world. Divide it into sections, like "Cats and people", which will tell some news about helping a person; "Famous cats", which will talk about a trending or famous cat; "CatSci", which will talk about the latest research related to cats.
+In your results, please also include the link for each piece of news.
+Further, generate prompts to generate images for each section. The prompt should vividly describe the features of the cat mentioned in the article.
+Thanks!
+#############################################################################
+#############################################################################
+I would like to make the following additions to the site.
+1. Every section should have the text and an image beside it. The text should occup two third of the width, and the image one third. The image should be taken from public/{section_heading}. The first section will have the article on the left and the image on the right. The next section will have the image on the left and the article on the right, and so on alternatingly for subsequent sections.
+2. The link to the article should be within a text called <Link> at the end of the article. The link will be provided at the end of each section on the markdown file.
+#############################################################################
+#############################################################################
+
+#############################################################################
+#############################################################################
+
+#############################################################################
+#############################################################################
