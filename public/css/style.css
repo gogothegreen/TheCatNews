@@ -1,0 +1,31 @@
+/* 3D Balloon-like section headings in pastel colors */
+h2 {
+    font-size: 4rem;
+    color: white;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* 3D balloon-like shadow */
+    font-family: 'Comic Sans MS', cursive; /* Playful font for balloon effect */
+    margin-bottom: 50px;
+}
+
+h2:nth-of-type(1) {
+    color: #F9A8D4; /* Pastel pink */
+}
+
+h2:nth-of-type(2) {
+    color: #A7F3D0; /* Pastel green */
+}
+
+h2:nth-of-type(3) {
+    color: #C4B5FD; /* Pastel purple */
+}
+
+/* Additional spacing between sections */
+section {
+    margin-bottom: 100px;
+}
+
+@keyframes flash {
+    0% { color: #f0f; } /* Purple */
+    50% { color: #f08080; } /* Pink */
+    100% { color: #f0f; } /* Purple */
+}

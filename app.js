@@ -13,18 +13,26 @@ app.set('view engine', 'ejs');
 // Serve static files (images, CSS)
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Route to render the main page
+// Function to get the newest image from the 'public/images' folder
+function getNewestImage() {
+    const imageDir = path.join(__dirname, 'public/images');
+    const files = fs.readdirSync(imageDir)
+                    .map(file => ({
+                        name: file,
+                        time: fs.statSync(path.join(imageDir, file)).mtime.getTime()
+                    }))
+                    .sort((a, b) => b.time - a.time);
+    
+    return files.length > 0 ? `/images/${files[0].name}` : null;
+}
+
 app.get('/', (req, res) => {
-    // Read and convert Markdown file to HTML
-    const markdownFile = fs.readFileSync(path.join(__dirname, 'content/content.md'), 'utf-8');
-    const markdownContent = md.render(markdownFile);
+    const imageUrl = getNewestImage();  // Get the newest image
+    const markdownContent = fs.readFileSync('content/article.md', 'utf-8');
+    const htmlContent = md.render(markdownContent);
 
-    // Get image filenames from the images folder
-    const imagesDir = path.join(__dirname, 'public/images');
-    const images = fs.readdirSync(imagesDir).filter(file => file.endsWith('.jpg') || file.endsWith('.png'));
-
-    // Render the HTML page using the EJS template
-    res.render('index', { markdownContent, images });
+    // Render index.ejs and pass imageUrl and content
+    res.render('index', { content: htmlContent, imageUrl: imageUrl });
 });
 
 // Start the server
